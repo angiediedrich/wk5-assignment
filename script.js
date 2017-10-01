@@ -1,4 +1,13 @@
 //For readability and clarity it is good practice to declare variables at the beginning of the JS document if possible
+var userName = 
+  window.prompt ("What's your name?");
+
+if (typeof userName === "string" && userName.length > 0) {
+  console.log("Hi " + userName + "!");
+} else {
+  console.log("OK, I'll just call you User.");
+};
+
 var churchillSpeech = {
       'author': 'Churchill',
       'year': 1940,
@@ -21,10 +30,89 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+
+  var favoriteAuthor =
+    window.prompt ("Which author is your favorite: Churchill, Ghandi or Demosthenes?");
+
+    switch (favoriteAuthor) {
+
+      case "Churchill" :
+
+        console.log (
+          speechesArray[0].author +
+          " was " +
+          speechesArray[0].authorAge +
+          " in " +
+          speechesArray[0].year +
+          ".");
+          break;
+
+      case "Ghandi" :
+
+        console.log (
+          speechesArray[1].author +
+          " was " +
+          speechesArray[1].authorAge +
+          " in " +
+          speechesArray[1].year +
+          ".");
+          break;
+
+      case "Demosthenes" :
+
+        console.log (
+          speechesArray[2].author +
+          " was " +
+          speechesArray[2].authorAge +
+          " in " +
+          speechesArray[2].year +
+          ".");
+          break;
+
+      default:
+        console.log ("Hmm, I didn't quite catch that.  Please try again.")
+        break;
+    }
+
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+  switch (favoriteAuthor) {
+
+      case "Churchill" :
+
+        console.log (
+          'This speech was written by ' + 
+          speechesArray[0].author +
+          " in " +
+          speechesArray[0].year +
+          ".");
+          break;
+
+      case "Ghandi" :
+
+        console.log (
+          'This speech was written by ' + 
+          speechesArray[1].author +
+          " in " +
+          speechesArray[1].year +
+          ".");
+          break;
+
+      case "Demosthenes" :
+
+        console.log (
+          'This speech was written by ' + 
+          speechesArray[2].author +
+          " in " +
+          speechesArray[2].year +
+          ".");
+          break;
+
+      default:
+        console.log ("Hmm, I didn't quite catch that.  Please try again.")
+        break;
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){

@@ -2,12 +2,14 @@
 var userName = 
   window.prompt ("What's your name?");
 
+//Get the userName
 if (typeof userName === "string" && userName.length > 0) {
   console.log("Hi " + userName + "!");
 } else {
   console.log("OK, I'll just call you User.");
 };
 
+//Speeches
 var churchillSpeech = {
       'author': 'Churchill',
       'year': 1940,
@@ -70,10 +72,9 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
           break;
 
       default:
-        console.log ("Hmm, I didn't quite catch that.  Please try again.")
+        console.log ("Hmm, I didn't quite catch that.  Please try again.");
         break;
     }
-
 });
 
 
@@ -88,52 +89,23 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
     speechesArray[0].year +
     ".");
 
+
   if (speechesArray[0].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
-
   } else {
-    console.log ("This speech took place during the common era.")
+    console.log ("This speech took place during the common era.");
   }
 
-  /*
 
-  switch (favoriteAuthor) {
-
-      case "Churchill" :
-
-        console.log (
-          'This speech was written by ' + 
-          speechesArray[0].author +
-          " in " +
-          speechesArray[0].year +
-          ".");
-          break;
-
-      case "Ghandi" :
-
-        console.log (
-          'This speech was written by ' + 
-          speechesArray[1].author +
-          " in " +
-          speechesArray[1].year +
-          ".");
-          break;
-
-      case "Demosthenes" :
-
-        console.log (
-          'This speech was written by ' + 
-          speechesArray[2].author +
-          " in " +
-          speechesArray[2].year +
-          ".");
-          break;
-
-      default:
-        console.log ("Hmm, I didn't quite catch that.  Please try again.")
-        break;
-
-        */
+  if (speechesArray[0].year < speechesArray[1].year 
+    && speechesArray[0].year < speechesArray[2].year) {
+      console.log ("This is the oldest speech on the page.");
+  } else if (speechesArray[0].year > speechesArray[1].year 
+    && speechesArray[0].year > speechesArray[2].year) {
+      console.log ("This speech is the most recent on the page.");
+  } else {
+      console.log ("This is the 2nd most recent speech on the page.");
+  }
 });
 
 
@@ -148,13 +120,24 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     speechesArray[1].year +
     ".");
 
+
   if (speechesArray[1].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
 
   } else { 
-    console.log ("This speech took place during the common era.")
+    console.log ("This speech took place during the common era.");
   }
 
+
+  if (speechesArray[1].year < speechesArray[0].year 
+    && speechesArray[1].year < speechesArray[2].year) {
+      console.log ("This is the oldest speech on the page.");
+  } else if (speechesArray[1].year > speechesArray[0].year 
+    && speechesArray[1].year > speechesArray[2].year) {
+      console.log ("This speech is the most recent on the page.");
+  } else {
+      console.log ("This is the 2nd most recent speech on the page.");
+  }
 });
 
 
@@ -169,10 +152,22 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     speechesArray[2].year +
     ".");
 
+
   if (speechesArray[2].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
 
   } else { 
-    console.log ("This speech took place during the common era.")
+    console.log ("This speech took place during the common era.");
+  }
+
+
+  if (speechesArray[2].year < speechesArray[0].year 
+    && speechesArray[2].year < speechesArray[1].year) {
+      console.log ("This is the oldest speech on the page.");
+  } else if (speechesArray[2].year > speechesArray[0].year 
+    && speechesArray[2].year > speechesArray[1].year) {
+      console.log ("This speech is the most recent on the page.");
+  } else {
+      console.log ("This is the 2nd most recent speech on the page.");
   }
 });

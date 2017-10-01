@@ -33,6 +33,7 @@ var churchillSpeech = {
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
 
+//User's Favorite Author
   var favoriteAuthor =
     window.prompt ("Which author is your favorite: Churchill, Ghandi or Demosthenes?");
 
@@ -81,7 +82,8 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
-  
+
+//Author + Year
   console.log (
     'This speech was written by ' + 
     speechesArray[0].author +
@@ -89,14 +91,14 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
     speechesArray[0].year +
     ".");
 
-
+//Before or After Common Era
   if (speechesArray[0].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
   } else {
     console.log ("This speech took place during the common era.");
   }
 
-
+//Most Recent or Oldest Speech
   if (speechesArray[0].year < speechesArray[1].year 
     && speechesArray[0].year < speechesArray[2].year) {
       console.log ("This is the oldest speech on the page.");
@@ -113,6 +115,7 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
 
+//Author + Year
   console.log (
     'This speech was written by ' + 
     speechesArray[1].author + 
@@ -120,7 +123,7 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     speechesArray[1].year +
     ".");
 
-
+//Before or After Common Era
   if (speechesArray[1].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
 
@@ -128,7 +131,7 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     console.log ("This speech took place during the common era.");
   }
 
-
+//Most Recent or Oldest Speech
   if (speechesArray[1].year < speechesArray[0].year 
     && speechesArray[1].year < speechesArray[2].year) {
       console.log ("This is the oldest speech on the page.");
@@ -145,6 +148,7 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
 
+//Author + Year
   console.log (
     'This speech was written by ' + 
     speechesArray[2].author +
@@ -152,7 +156,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     speechesArray[2].year +
     ".");
 
-
+//Before or After Common Era
   if (speechesArray[2].yearIsBCE === true) {
     console.log ("This speech took place before the common era.");
 
@@ -160,7 +164,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     console.log ("This speech took place during the common era.");
   }
 
-
+//Most Recent or Oldest Speech
   if (speechesArray[2].year < speechesArray[0].year 
     && speechesArray[2].year < speechesArray[1].year) {
       console.log ("This is the oldest speech on the page.");
